@@ -2,11 +2,13 @@
   "name": "pg-performance-lab",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "clean": "rimraf node_modules **/*/node_modules",
     "dev": "turbo run dev",
+    "build": "turbo run build",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "format": "turbo format",
+    "typecheck": "turbo typecheck",
+    "typecheck:watch": "turbo typecheck:watch"
   },
   "devDependencies": {
     "prettier": "^3.7.4",
