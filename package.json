@@ -10,13 +10,29 @@
     "typecheck": "turbo typecheck",
     "typecheck:watch": "turbo typecheck:watch"
   },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "vite",
+    "nestjs",
+    "react"
+  ],
   "devDependencies": {
     "prettier": "^3.7.4",
     "turbo": "^2.7.5",
-    "typescript": "5.9.2"
+    "typescript": "5.9.2",
+    "@pg-performance-lab/config": "workspace:*",
+    "rimraf": "^6.1.2"
   },
   "packageManager": "pnpm@9.0.0",
-  "engines": {
-    "node": ">=18"
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@babel/*",
+        "expo-modules-*",
+        "typescript"
+      ]
+    }
   }
 }
